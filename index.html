@@ -5,46 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoElite Motors</title>
-
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            min-height: 100vh;
+            background-image: url('./Imagens/Fundo.jpg');
+        }
+    </style>
 </head>
-<header>
-    <img src = "Imagens/Logo.png" width="300" alt="Logo da Loja" class="Logo">
-</header>
 
 <body>
 
-    <!-- MENU -->
-    <header class="menu">
-        <div class="container-menu">
-            <a href="#">HOME</a>
-            <a href="#estoque">ESTOQUE</a>
-            <a href="#contato">CONTATOS</a>
-            <a href="#contato">MINHA EQUIPE</a>
-        </div>
+    <!-- LOGO -->
+    <header style="width:100%; background-color:#111; text-align:center; padding:15px 0; display:flex; justify-content:center; align-items:center;">
+        <img src="Imagens/logo_cabecalho.png" style="width:300px; height:auto;" alt="Logo da Loja">
     </header>
 
+    <!-- MENU -->
+    <div style="background-color:#222; display:flex; justify-content:center; padding:12px 0; gap:30px;">
+        <a href="#inicio" style="color:#fff; text-decoration:none; font-family:'Raleway',sans-serif; font-weight:600; letter-spacing:1px;">INICIO</a>
+        <a href="#estoque" style="color:#fff; text-decoration:none; font-family:'Raleway',sans-serif; font-weight:600; letter-spacing:1px;">ESTOQUE</a>
+        <a href="#contato" style="color:#fff; text-decoration:none; font-family:'Raleway',sans-serif; font-weight:600; letter-spacing:1px;">CONTATOS</a>
+        <a href="#equipe" style="color:#fff; text-decoration:none; font-family:'Raleway',sans-serif; font-weight:600; letter-spacing:1px;">MINHA EQUIPE</a>
+    </div>
+
     <!-- BANNER -->
-    <section class="banner">
+    <section style="display:flex; justify-content:center; align-items:center; height:calc(100vh - 130px); text-align:center;">
         <div>
-            <h1>AutoElite Motors</h1>
-            <p>Os melhores carros usados com qualidade garantida</p>
+            <h1 style="font-family:'Bebas Neue',sans-serif; font-size:80px; color:#fff; text-shadow: 0 4px 16px rgba(0,0,0,0.8); letter-spacing:3px;">AutoElite Motors</h1>
+            <p style="font-family:'Raleway',sans-serif; font-size:19px; color:#f0f0f0; text-shadow: 0 2px 8px rgba(0,0,0,0.8); letter-spacing:1px;">Os melhores carros usados com qualidade garantida</p>
         </div>
     </section>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: 0;
-    }
-    body {
-        background-size: cover; 
-        background-position: center;
-        
-        width: 100vw;
-        height: 100vh;
-        background-image: url('./Imagens/Fundo.jpg');
-        
-    }
-</style>
-   
+
+</body>
+</html>

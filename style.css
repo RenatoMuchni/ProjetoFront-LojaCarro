@@ -17,10 +17,33 @@ header{
     background-color: #111;
     text-align: center;
     padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Logo{
     width: 100%;
     max-width: 500px;
     height: auto;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.container-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* BANNER */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
