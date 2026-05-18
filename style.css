@@ -11,8 +11,8 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
 
-    background-image: url('./Imagens/Fundo.jpg');
-    background-size: cover;
+    background-image: url('./Imagens/Fundo.jpeg');
+    background-size: 145% ;
     background-position: center;
 
     width: 100vw;
@@ -73,9 +73,10 @@ header {
     text-align: center;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
 .banner-texto h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 80px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 90px;
 
     color: #fff;
 
@@ -86,7 +87,7 @@ header {
 
 .banner-texto p {
     font-family: 'Raleway', sans-serif;
-    font-size: 19px;
+    font-size: 30px;
 
     color: #f0f0f0;
 
