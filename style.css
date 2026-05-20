@@ -154,6 +154,14 @@ header {
     background-color: #ff4d5a;
 }
 
+.pesquisa button .icone-buscar {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 1px;
+    filter: brightness(1) invert(1);
+}
+
 /* ===== FORMULÁRIO CADASTRO ===== */
 
 .form-container {
@@ -254,6 +262,14 @@ header {
     color: white;
     font-weight: 600;
     font-size: 16px;
+}
+
+.telefones-rodape p .icone-whatsapp {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: px;
+    filter: invert(59%) sepia(97%) saturate(401%) hue-rotate(87deg) brightness(96%) contrast(91%);
 }
 .links-rodape{
     display: flex;
