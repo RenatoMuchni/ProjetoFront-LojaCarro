@@ -39,7 +39,7 @@ autoelite-motors/
   ├── fundo.jpeg
   ├── civic.png
   ├── fluence.png
-  ├── gol.png
+  └── gol.png
 
 ```
 
