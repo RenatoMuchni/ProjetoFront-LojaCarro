@@ -271,24 +271,18 @@ header {
     margin-right: 1px;
     filter: invert(59%) sepia(97%) saturate(401%) hue-rotate(87deg) brightness(96%) contrast(91%);
 }
-.links-rodape{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 12px 20px;
-    margin-left: 25px;
-}
 
-.links-rodape a{
+.telefones-rodape p a {
     color: white;
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
 }
 
-.links-rodape a:hover{
+.telefones-rodape p a:hover {
     color: #ff3b3b;
 }
+
 #estoque {
     padding: 80px 40px;
 
