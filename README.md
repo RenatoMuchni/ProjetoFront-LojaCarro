@@ -31,9 +31,12 @@ autoelite-motors/
 ├── cadastro.html # Página de cadastro de clientes
 ├── login.html # Página de login
 ├── style.css # Arquivo de estilos principal
-└── Imagens/ # Pasta com imagens do projeto
+├── icones/ # Diretorio com icones utilizados no projeto
+  ├── buscar.svg
+  └── whatsapp.svg
+└── imagens/ # Diretorio com imagens utilizadas no projeto
   ├── logo_cabecalho.png
-  ├── Fundo.jpeg
+  ├── fundo.jpeg
   ├── civic.png
   ├── fluence.png
   ├── gol.png
