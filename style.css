@@ -66,7 +66,7 @@ header {
 
 
 .banner-texto h1 {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: sans-serif;
     font-size: 90px;
     color: #fff;
     letter-spacing: 3px;
@@ -80,7 +80,7 @@ header {
 }
 
 .banner-texto p {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: sans-serif;
     font-size: 30px;
     color: #f7ecec;
     letter-spacing: 1px;
