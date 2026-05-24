@@ -117,10 +117,17 @@ O projeto foi desenvolvido com foco em um visual moderno e automotivo:
 
 Projeto desenvolvido para disciplina de Front-End / ADS como prática de:
 
-- Estruturação de páginas web
-- HTML semântico
-- CSS e layout
+- Estruturação de páginas web;
+- HTML semântico;
+- CSS e layout;
 - Organização de projeto web
+
+Participantes do Projeto:
+
+- Bruno Samuel de Camargo Cardoso;
+- Bruno Rocha de Souza;
+- Fabio Kaynan Ignacio Ramos;
+- Renato Muchni Teixeira
 
 ---
 
