@@ -1,5 +1,4 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,7 +38,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 12px 0;  
+    padding: 12px 0;
 }
 
 .menu a {
@@ -86,7 +85,7 @@ header {
     color: #f7ecec;
     letter-spacing: 1px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-    
+
 }
 
 .pesquisa {
@@ -184,7 +183,8 @@ header {
     background-color: #ff4d5a;
     transform: scale(1.03);
 }
-.rodape{
+
+.rodape {
     background: #2b2b2b;
     color: white;
     padding: 25px 40px;
@@ -192,18 +192,19 @@ header {
     margin-top: 40px;
 }
 
-.rodape h3{
+.rodape h3 {
     margin: 0 0 15px 25px;
     color: #ff3b3b;
     font-size: 30px;
     font-family: 'Raleway', sans-serif;
 }
 
-.telefones-rodape{
+.telefones-rodape {
     margin-left: 25px;
     margin-bottom: 15px;
 }
-.telefones-rodape p{
+
+.telefones-rodape p {
     margin: 4px 0;
     color: white;
     font-weight: 600;
