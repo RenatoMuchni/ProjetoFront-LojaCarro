@@ -79,7 +79,7 @@ header {
 
 
 .banner-texto h1 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     font-size: 90px;
 
     color: #fff;
@@ -97,7 +97,7 @@ header {
 }
 
 .banner-texto p {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     font-size: 30px;
 
     color: #f7ecec;
@@ -248,7 +248,7 @@ header {
 .rodape h3{
     margin: 0 0 15px 25px;
     color: #ff3b3b;
-    font-size: 18px;
+    font-size: 30px;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -260,7 +260,7 @@ header {
     margin: 4px 0;
     color: white;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .telefones-rodape p .icone-whatsapp {
