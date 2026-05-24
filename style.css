@@ -162,7 +162,6 @@ header {
     filter: brightness(1) invert(1);
 }
 
-/* ===== FORMULÁRIO CADASTRO ===== */
 
 .form-container {
     width: 400px;
@@ -178,7 +177,7 @@ header {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
-.form-container h2 {
+.form-container h1 {
     text-align: center;
 
     color: #fff;
