@@ -28,9 +28,13 @@ O **AutoElite Motors** é um site desenvolvido como projeto acadêmico de Front-
 ## 📁 Estrutura do projeto
 autoelite-motors/
 ├── index.html # Página inicial do site
-├── cadastro.html # Página de cadastro de clientes
-├── login.html # Página de login
-├── style.css # Arquivo de estilos principal
+├── html/ # Diretorio com arquivos HTML
+  ├── cadastro.html # Página de cadastro de clientes
+  └── login.html # Página de login
+├── css/ # Diretorio com arquivos CSS
+  └── style.css # Arquivo de estilos principal
+├── js/ # Diretorio com arquivos Java Script
+  └── script.js # Arquivo Java Script
 ├── icones/ # Diretorio com icones utilizados no projeto
   ├── buscar.svg
   └── whatsapp.svg
