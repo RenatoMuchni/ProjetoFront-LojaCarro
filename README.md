@@ -20,6 +20,8 @@ O **AutoElite Motors** é um site desenvolvido como projeto acadêmico de Front-
 
 - HTML5 (estrutura das páginas)
 - CSS3 (estilização e layout)
+- JavaScript (painel de acessibilidade e armazenamento local)
+- Web Storage API (localStorage para salvar preferências)
 - Google Fonts (tipografia)
 - Organização de arquivos e imagens
 
@@ -40,7 +42,7 @@ autoelite-motors/
   └── whatsapp.svg
 └── imagens/ # Diretorio com imagens utilizadas no projeto
   ├── logo_cabecalho.png
-  ├── fundo.jpeg
+  ├── fundo.png
   ├── civic.png
   ├── fluence.png
   └── gol.png
@@ -86,6 +88,22 @@ Formulário com campos:
 
 ---
 
+##  Acessibilidade (ABNT NBR 17225)
+
+O site possui uma barra de acessibilidade fixa no topo, presente em todas as páginas,
+que permite ao usuário ajustar a apresentação do conteúdo. Os recursos atendem aos
+seguintes itens da norma ABNT NBR 17225:2025:
+
+- **Alto contraste** (5.11): alterna o esquema de cores da página para preto e branco
+- **Tamanho do texto** (5.12.7): aumenta a fonte de 100% até 200%
+- **Espaçamento do texto** (5.12.1 a 5.12.4): ajusta entrelinha, espaçamento entre
+  letras, palavras e parágrafos
+- **Contraste dos textos da barra** (5.11.2 / 5.11.3): acima de 7:1
+- **Persistência**: as escolhas do usuário são salvas no navegador (localStorage) e
+  mantidas ao recarregar e ao navegar entre as páginas
+
+---
+
 ##  Estilo e layout
 
 O projeto foi desenvolvido com foco em um visual moderno e automotivo:
@@ -102,14 +120,13 @@ O projeto foi desenvolvido com foco em um visual moderno e automotivo:
 
 - Projeto apenas front-end
 - Não possui banco de dados
-- Não há armazenamento de dados
+- As preferências de acessibilidade são salvas localmente no navegador (localStorage); não há outro armazenamento
 - Login e cadastro são apenas visuais (simulação)
 
 ---
 
 ##  Possíveis melhorias futuras
 
-- Implementação de JavaScript para validação de formulários
 - Sistema de login funcional com backend
 - Integração com banco de dados
 - Filtro de busca no estoque

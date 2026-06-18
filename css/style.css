@@ -1,3 +1,12 @@
+/* Variáveis de acessibilidade */
+:root {
+    --escala-fonte: 1; /* multiplica o tamanho base do texto */
+    --altura-linha: 1.4; /* entrelinha */
+    --espaco-letra: 0em; /* espaçamento entre letras */
+    --espaco-palavra: 0em; /* espaçamento entre palavras */
+    --espaco-paragrafo: 0em; /* espaçamento entre parágrafos (5.12.2) */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +15,30 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: calc(125% * var(--escala-fonte)); /*Base de 125% (melhor leitura em telas grandes); a escala do usuário multiplica essa base e os textos usam unidades relativas para acompanhá-la*/
+}
+
+/* Aplica entrelinha e espaçamentos do usuário aos blocos de texto. Botões e campos herdam para manter coerência. */
+body,
+p,
+h1,
+h2,
+h3,
+label,
+a,
+li,
+input,
+textarea,
+button,
+span {
+    line-height: var(--altura-linha);
+    letter-spacing: var(--espaco-letra);
+    word-spacing: var(--espaco-palavra);
+}
+
+/* Espaçamento entre parágrafos controlado pelo usuário (5.12.2). */
+p {
+    margin-bottom: var(--espaco-paragrafo);
 }
 
 body {
@@ -46,7 +79,7 @@ header {
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 1.375rem;
     letter-spacing: 1px;
     transition: 0.3s;
 }
@@ -67,7 +100,7 @@ header {
 
 .banner-texto h1 {
     font-family: sans-serif;
-    font-size: 90px;
+    font-size: 5.625rem;
     color: #fff;
     letter-spacing: 3px;
     text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
@@ -81,7 +114,7 @@ header {
 
 .banner-texto p {
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #f7ecec;
     letter-spacing: 1px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
@@ -102,7 +135,7 @@ header {
     border: none;
     border-radius: 30px;
     outline: none;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .pesquisa button {
@@ -112,7 +145,7 @@ header {
     background-color: #e63946;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -123,8 +156,8 @@ header {
 }
 
 .pesquisa button .icone-buscar {
-    width: 25px;
-    height: 25px;
+    width: 1.5em;
+    height: 1.5em;
     vertical-align: middle;
     margin-right: 1px;
     filter: brightness(1) invert(1);
@@ -146,13 +179,13 @@ header {
     margin-bottom: 25px;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 2px;
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 
 .form-container label {
     color: #fff;
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .form-container input,
@@ -164,7 +197,7 @@ header {
     border: none;
     border-radius: 8px;
     outline: none;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .form-container textarea {
@@ -195,7 +228,7 @@ header {
 .rodape h3 {
     margin: 0 0 15px 25px;
     color: #ff3b3b;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -208,12 +241,12 @@ header {
     margin: 4px 0;
     color: white;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .telefones-rodape p .icone-whatsapp {
-    width: 20px;
-    height: 20px;
+    width: 1.25em;
+    height: 1.25em;
     vertical-align: middle;
     margin-right: 1px;
     filter: invert(59%) sepia(97%) saturate(401%) hue-rotate(87deg) brightness(96%) contrast(91%);
@@ -238,7 +271,7 @@ header {
 }
 
 #estoque h2 {
-    font-size: 50px;
+    font-size: 3.125rem;
     margin-bottom: 50px;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 2px;
@@ -271,4 +304,170 @@ header {
 
 .carro p {
     margin: 5px 0;
+}
+
+/* BARRA DE ACESSIBILIDADE*/
+
+#barra-acessibilidade {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 22px;
+    background-color: #0d0d0d;
+    border-bottom: 3px solid #ff8585;
+    padding: 8px 16px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+#barra-acessibilidade .ac-titulo {
+    color: #ff8585;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#barra-acessibilidade .ac-grupo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#barra-acessibilidade .ac-rotulo {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+#barra-acessibilidade .ac-valor {
+    color: #fff;
+    font-size: 0.9rem;
+    min-width: 52px;
+    text-align: center;
+}
+
+/* Área de acionamento mínima de 24px (5.8.7) e foco visível
+   com contraste >= 3:1 */
+#barra-acessibilidade .ac-btn {
+    min-height: 32px;
+    min-width: 32px;
+    padding: 6px 12px;
+    border: 1px solid #ff8585;
+    border-radius: 6px;
+    background-color: #1b1b1b;
+    color: #fff;
+    font-size: 0.9rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#barra-acessibilidade .ac-btn:hover {
+    background-color: #ff8585;
+    color: #0d0d0d;
+}
+
+#barra-acessibilidade .ac-btn:focus-visible {
+    outline: 3px solid #4da3ff;
+    outline-offset: 2px;
+}
+
+#barra-acessibilidade .ac-btn[aria-pressed="true"] {
+    background-color: #ff8585;
+    color: #0d0d0d;
+    font-weight: 700;
+}
+
+/* Garante foco visível em todos os elementos interativos do site, não só na barra. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #4da3ff;
+    outline-offset: 2px;
+}
+
+/*TEMA DE ALTO CONTRASTE */
+
+html.alto-contraste body {
+    background-image: none;
+    background-color: #000;
+}
+
+html.alto-contraste header,
+html.alto-contraste .menu,
+html.alto-contraste #estoque,
+html.alto-contraste .carro,
+html.alto-contraste .form-container,
+html.alto-contraste .rodape {
+    background-color: #000 !important;
+    border: 1px solid #fff;
+}
+
+html.alto-contraste .menu a,
+html.alto-contraste .banner-texto h1,
+html.alto-contraste .banner-texto h1 span,
+html.alto-contraste .banner-texto p,
+html.alto-contraste .form-container h1,
+html.alto-contraste .form-container label,
+html.alto-contraste .carro h3,
+html.alto-contraste .carro p,
+html.alto-contraste .telefones-rodape p,
+html.alto-contraste .telefones-rodape p a,
+html.alto-contraste #estoque h2 {
+    color: #fff !important;
+    text-shadow: none !important;
+    -webkit-text-stroke: 0 !important;
+}
+
+html.alto-contraste .menu a:hover,
+html.alto-contraste .telefones-rodape p a:hover,
+html.alto-contraste .rodape h3 {
+    color: #ffd400 !important;
+}
+
+/* Campos de formulário e pesquisa: texto escuro sobre branco. */
+html.alto-contraste input,
+html.alto-contraste textarea,
+html.alto-contraste .pesquisa input {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #000 !important;
+}
+
+/* Botões de ação: amarelo com texto preto (alto contraste). */
+html.alto-contraste .form-container input[type="submit"],
+html.alto-contraste .pesquisa button {
+    background-color: #ffd400 !important;
+    color: #000 !important;
+    border: 1px solid #fff !important;
+}
+
+/* A barra mantém o mesmo visual no modo alto contraste. */
+html.alto-contraste #barra-acessibilidade {
+    background-color: #000;
+}
+
+/* Respeita preferência do sistema por menos movimento. */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+
+/* Responsividade da barra em telas estreitas. */
+@media (max-width: 600px) {
+    #barra-acessibilidade {
+        gap: 8px 12px;
+        padding: 8px;
+    }
+
+    #barra-acessibilidade .ac-titulo {
+        width: 100%;
+        text-align: center;
+    }
 }
