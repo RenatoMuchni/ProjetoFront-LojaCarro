@@ -14,7 +14,6 @@ var PALAVRA = [0, 0.16, 0.24, 0.32];
 var PARAGRAFO = [0, 2, 2.5, 3];
 var NOME_ESPACO = ["Normal", "Médio", "Amplo", "Máximo"];
 
-
 // Le os valores salvos no localStorage
 function carregar() {
   if (localStorage.getItem("ac_fonte") !== null) {
@@ -28,7 +27,6 @@ function carregar() {
   }
 }
 
-
 // Salva os valores atuais no localStorage
 function salvar() {
   localStorage.setItem("ac_fonte", passoFonte);
@@ -40,34 +38,41 @@ function salvar() {
   }
 }
 
-
 // Aplica o estado atual na pagina
 function aplicar() {
   var corpo = document.body;
 
-  // Tamanho da fonte.
-  corpo.style.fontSize = FONTE[passoFonte] * 100 + "%";
+  // Tamanho da fonte
+  document.documentElement.style.fontSize = 125 * FONTE[passoFonte] + "%";
 
-  // Espacamentos do texto.
-  corpo.style.lineHeight = LINHA[passoEspaco];
-  corpo.style.letterSpacing = LETRA[passoEspaco] + "em";
-  corpo.style.wordSpacing = PALAVRA[passoEspaco] + "em";
-
-  // Alto contraste: liga/desliga uma classe no body
+  // Alto contraste
   if (contrasteLigado === true) {
     corpo.classList.add("alto-contraste");
   } else {
     corpo.classList.remove("alto-contraste");
   }
 
-  // Espacamento entre paragrafos: percorre todos os <p> com um laco
-  var paragrafos = document.getElementsByTagName("p");
-  var i;
-  for (i = 0; i < paragrafos.length; i++) {
-    paragrafos[i].style.marginBottom = PARAGRAFO[passoEspaco] + "em";
+  // Espacamento do texto
+  var tags = ["p", "h1", "h2", "h3", "a", "label", "li"];
+  var t;
+  for (t = 0; t < tags.length; t++) {
+    var elementos = document.getElementsByTagName(tags[t]);
+    var i;
+    for (i = 0; i < elementos.length; i++) {
+      elementos[i].style.lineHeight = LINHA[passoEspaco];
+      elementos[i].style.letterSpacing = LETRA[passoEspaco] + "em";
+      elementos[i].style.wordSpacing = PALAVRA[passoEspaco] + "em";
+    }
   }
 
-  // Atualiza os textos mostrados na barra (aula 02 - textContent).
+  // Espacamento entre paragrafos.
+  var paragrafos = document.getElementsByTagName("p");
+  var p;
+  for (p = 0; p < paragrafos.length; p++) {
+    paragrafos[p].style.marginBottom = PARAGRAFO[passoEspaco] + "em";
+  }
+
+  // Atualiza os textos mostrados na barra
   document.getElementById("ac-fonte").textContent = FONTE[passoFonte] * 100 + "%";
   document.getElementById("ac-espaco").textContent = NOME_ESPACO[passoEspaco];
 
@@ -127,7 +132,6 @@ function redefinir() {
   contrasteLigado = false;
   aplicar();
 }
-
 
 // Quando a pagina carrega, le o que foi salvo e aplica.
 window.onload = function () {
