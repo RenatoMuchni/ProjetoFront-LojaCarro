@@ -14,6 +14,31 @@
 
 <body>
 
+    <!-- Barra de acessibilidade -->
+    <nav id="barra-acessibilidade" aria-label="Opções de acessibilidade">
+        <span class="ac-titulo">Acessibilidade</span>
+
+        <div class="ac-grupo">
+            <button type="button" id="ac-contraste" class="ac-btn" onclick="ligarContraste()">Alto contraste: desativado</button>
+        </div>
+
+        <div class="ac-grupo">
+            <span class="ac-rotulo">Texto</span>
+            <button type="button" class="ac-btn" onclick="diminuirFonte()" aria-label="Diminuir texto">A−</button>
+            <span class="ac-valor" id="ac-fonte" aria-live="polite">100%</span>
+            <button type="button" class="ac-btn" onclick="aumentarFonte()" aria-label="Aumentar texto">A+</button>
+        </div>
+
+        <div class="ac-grupo">
+            <span class="ac-rotulo">Espaçamento</span>
+            <button type="button" class="ac-btn" onclick="diminuirEspaco()" aria-label="Reduzir espaçamento">−</button>
+            <span class="ac-valor" id="ac-espaco" aria-live="polite">Normal</span>
+            <button type="button" class="ac-btn" onclick="aumentarEspaco()" aria-label="Aumentar espaçamento">+</button>
+        </div>
+
+        <button type="button" id="ac-redefinir" class="ac-btn" onclick="redefinir()">Redefinir</button>
+    </nav>
+
     <header>
         <img src="../imagens/logo_cabecalho.png" class="logo" alt="Logo da Loja">
     </header>
