@@ -3,7 +3,7 @@
 
 ##  Sobre o projeto
 
-O **AutoElite Motors** é um site desenvolvido como projeto acadêmico de Front-End para simular uma concessionária de veículos usados. O objetivo é praticar estruturação de páginas web utilizando **HTML5 e CSS3**, aplicando conceitos de organização, navegação entre páginas e estilização moderna.
+O **AutoElite Motors** é um site desenvolvido como projeto acadêmico de Front-End para simular uma concessionária de veículos usados. O objetivo é praticar estruturação de páginas web utilizando **HTML5, CSS3 e JAVASCRIPT**, aplicando conceitos de organização, navegação entre páginas e estilização moderna.
 
 ---
 
@@ -13,6 +13,7 @@ O **AutoElite Motors** é um site desenvolvido como projeto acadêmico de Front-
 - Praticar criação de páginas interligadas
 - Trabalhar layout visual com CSS
 - Simular funcionalidades básicas de cadastro e login (sem backend)
+- Tornar melhor a questão de acessibilidade de uma pagina web
 
 ---
 
