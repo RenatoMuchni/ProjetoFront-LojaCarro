@@ -1,12 +1,7 @@
-//  Barra de acessibilidade - AutoElite Motors
-
-// Variaveis que guardam o estado atual
-// Comecam em 0 e sao lidas do localStorage, se existirem.
-var passoFonte = 0;   // 0 a 4  -> de 100% ate 200%
-var passoEspaco = 0;  // 0 a 3  -> de normal ate maximo
+var passoFonte = 0;
+var passoEspaco = 0;
 var contrasteLigado = false;
 
-// Tabelas com os valores de cada passo.
 var FONTE = [1, 1.25, 1.5, 1.75, 2];
 var LINHA = [1.4, 1.5, 1.8, 2.1];
 var LETRA = [0, 0.12, 0.16, 0.2];
@@ -14,7 +9,7 @@ var PALAVRA = [0, 0.16, 0.24, 0.32];
 var PARAGRAFO = [0, 2, 2.5, 3];
 var NOME_ESPACO = ["Normal", "Médio", "Amplo", "Máximo"];
 
-// Le os valores salvos no localStorage
+
 function carregar() {
   if (localStorage.getItem("ac_fonte") !== null) {
     passoFonte = Number(localStorage.getItem("ac_fonte"));
@@ -27,7 +22,7 @@ function carregar() {
   }
 }
 
-// Salva os valores atuais no localStorage
+
 function salvar() {
   localStorage.setItem("ac_fonte", passoFonte);
   localStorage.setItem("ac_espaco", passoEspaco);
@@ -38,21 +33,20 @@ function salvar() {
   }
 }
 
-// Aplica o estado atual na pagina
+
 function aplicar() {
   var corpo = document.body;
 
-  // Tamanho da fonte
+  
   document.documentElement.style.fontSize = 125 * FONTE[passoFonte] + "%";
 
-  // Alto contraste
+
   if (contrasteLigado === true) {
     corpo.classList.add("alto-contraste");
   } else {
     corpo.classList.remove("alto-contraste");
   }
 
-  // Espacamento do texto
   var tags = ["p", "h1", "h2", "h3", "a", "label", "li"];
   var t;
   for (t = 0; t < tags.length; t++) {
@@ -65,14 +59,12 @@ function aplicar() {
     }
   }
 
-  // Espacamento entre paragrafos.
   var paragrafos = document.getElementsByTagName("p");
   var p;
   for (p = 0; p < paragrafos.length; p++) {
     paragrafos[p].style.marginBottom = PARAGRAFO[passoEspaco] + "em";
   }
 
-  // Atualiza os textos mostrados na barra
   document.getElementById("ac-fonte").textContent = FONTE[passoFonte] * 100 + "%";
   document.getElementById("ac-espaco").textContent = NOME_ESPACO[passoEspaco];
 
@@ -87,7 +79,6 @@ function aplicar() {
   salvar();
 }
 
-// Funcoes chamadas pelos botoes (uma para cada acao).
 
 function ligarContraste() {
   if (contrasteLigado === true) {
@@ -133,7 +124,24 @@ function redefinir() {
   aplicar();
 }
 
-// Quando a pagina carrega, le o que foi salvo e aplica.
+function pesquisar(){
+  var texto = document.getElementById("campo-busca").value.toLocaleLowerCase();
+  var carros = document.getElementsByClassName("carro");
+  var i;
+
+  for(i=0;i<carros.length; i++){
+    var titulo = carros[i].getElementsByTagName("h3")[0].textContent.toLowerCase();
+
+    if (titulo.indexOf(texto) !== -1) {
+      carros[i].style.display = "inline-block";
+    } else {
+      carros[i].style.display = "none";
+    }
+  }
+
+  document.getElementById("estoque").scrollIntoView();
+}
+
 window.onload = function () {
   carregar();
   aplicar();

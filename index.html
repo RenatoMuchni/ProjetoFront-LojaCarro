@@ -14,7 +14,6 @@
 
 <body>
 
-    <!-- Barra de acessibilidade -->
     <nav id="barra-acessibilidade" aria-label="Opções de acessibilidade">
         <span class="ac-titulo">Acessibilidade</span>
 
@@ -52,11 +51,8 @@
     </nav>
 
     <div class="pesquisa">
-
-        <input type="text" placeholder="Pesquisar veículos...">
-
-        <button><img src="./icones/buscar.svg" class="icone-buscar" alt="Buscar"></button>
-
+        <input type="text" id="campo-busca" placeholder="Pesquisar veículos...">
+        <button onclick="pesquisar()"><img src="./icones/buscar.svg" class="icone-buscar" alt="Buscar"></button>
     </div>
 
     <section class="banner">

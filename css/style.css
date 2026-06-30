@@ -6,15 +6,13 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 125%; /* tamanho base do texto */
+    font-size: 125%;
 }
 
-/* Entrelinha base */
 body {
     line-height: 1.4;
 }
 
-/* Espaçamento base entre parágrafos. */
 p {
     margin-bottom: 0;
 }
@@ -284,7 +282,6 @@ header {
     margin: 5px 0;
 }
 
-/* BARRA DE ACESSIBILIDADE*/
 
 #barra-acessibilidade {
     position: sticky;
@@ -327,7 +324,6 @@ header {
     text-align: center;
 }
 
-/* Área mínima e foco visível com contraste */
 #barra-acessibilidade .ac-btn {
     min-height: 32px;
     min-width: 32px;
@@ -358,7 +354,6 @@ header {
     font-weight: 700;
 }
 
-/* Garante foco visível em todos os elementos interativos do site, não só na barra. */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -367,7 +362,6 @@ textarea:focus-visible {
     outline-offset: 2px;
 }
 
-/*TEMA DE ALTO CONTRASTE */
 
 body.alto-contraste {
     background-image: none;
@@ -406,7 +400,6 @@ body.alto-contraste .rodape h3 {
     color: #ffd400 !important;
 }
 
-/* Campos de formulário e pesquisa */
 body.alto-contraste input,
 body.alto-contraste textarea,
 body.alto-contraste .pesquisa input {
@@ -415,7 +408,6 @@ body.alto-contraste .pesquisa input {
     border: 1px solid #000 !important;
 }
 
-/* Botões de ação */
 body.alto-contraste .form-container input[type="submit"],
 body.alto-contraste .pesquisa button {
     background-color: #ffd400 !important;
@@ -423,12 +415,10 @@ body.alto-contraste .pesquisa button {
     border: 1px solid #fff !important;
 }
 
-/* A barra mantém o mesmo visual no modo alto contraste */
 body.alto-contraste #barra-acessibilidade {
     background-color: #000;
 }
 
-/* Responsividade da barra em telas estreitas. */
 @media (max-width: 600px) {
     #barra-acessibilidade {
         gap: 8px 12px;
